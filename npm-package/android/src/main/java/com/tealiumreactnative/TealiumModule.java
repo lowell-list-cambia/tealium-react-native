@@ -76,6 +76,7 @@ public class TealiumModule extends ReactContextBaseJavaModule {
                            String environment,
                            String iosDatasource,
                            String androidDatasource,
+                           String overrideCollectDispatchURL,
                            String instance,
                            boolean isLifecycleEnabled) {
 
@@ -86,6 +87,10 @@ public class TealiumModule extends ReactContextBaseJavaModule {
         final Tealium.Config config = Tealium.Config.create(getApplication(), account, profile, environment);
         if (androidDatasource != null) {
             config.setDatasourceId(androidDatasource);
+        }
+
+        if (overrideCollectDispatchURL != null) {
+            config.setOverrideCollectDispatchURL(overrideCollectDispatchURL);
         }
 
         mTealiumInstanceName = instance;

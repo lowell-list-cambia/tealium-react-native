@@ -39,6 +39,7 @@ RCT_EXPORT_METHOD(initialize:(NSString *)account
                   environment:(NSString *)environment
                   iosDatasource:(NSString *)iosDatasource
                   androidDatasource:(NSString *)androidDatasource
+                  overrideCollectDispatchURL:(NSString *)overrideCollectDispatchURL
                   instance:(NSString *)instance
                   isLifeCycleEnabled:(BOOL)isLifeCycleEnabled) {
     // Set your account, profile, and environment
@@ -47,7 +48,8 @@ RCT_EXPORT_METHOD(initialize:(NSString *)account
                                                                        environment:environment
                                                                         datasource:iosDatasource];
     [configuration setAutotrackingLifecycleEnabled:isLifeCycleEnabled];
-    
+    [configuration setOverrideCollectDispatchURL:overrideCollectDispatchURL];
+
     tealiumInternalInstanceName = instance;
     
     // Initialize with a unique key for this instance
