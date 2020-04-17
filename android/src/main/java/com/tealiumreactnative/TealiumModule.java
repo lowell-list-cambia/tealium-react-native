@@ -90,7 +90,7 @@ public class TealiumModule extends ReactContextBaseJavaModule {
         }
 
         if (overrideCollectDispatchURL != null) {
-            config.setOverrideCollectDispatchURL(overrideCollectDispatchURL);
+            config.setOverrideCollectDispatchUrl(overrideCollectDispatchURL);
         }
 
         mTealiumInstanceName = instance;
