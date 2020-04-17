@@ -17,6 +17,8 @@ declare module 'tealium-react-native' {
      * @param environment Tealium environment
      * @param iosDataSource A data source key from UDH eg. “abc123”
      * @param androidDataSource A data source key from UDH eg. “def456”
+     * @param overrideCollectDispatchUrl URL of back-end service to also 
+     *    forward Tealium analytic event data to
      */
     static initialize(
       account: string,
@@ -24,6 +26,7 @@ declare module 'tealium-react-native' {
       environment: string,
       iosDataSource?: string,
       androidDataSource?: string,
+      overrideCollectDispatchUrl: string,
     ): void;
 
     /**

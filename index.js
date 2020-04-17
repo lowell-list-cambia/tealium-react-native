@@ -35,7 +35,6 @@ export default class Tealium {
         environment,
         iosDatasource,
         androidDatasource,
-        overrideCollectDispatchUrl,
         instanceName = 'MAIN',
         isLifecycleEnabled = true,
     ) {
@@ -45,7 +44,6 @@ export default class Tealium {
             environment,
             iosDatasource,
             androidDatasource,
-            overrideCollectDispatchUrl,
             instanceName,
             isLifecycleEnabled,
         );
